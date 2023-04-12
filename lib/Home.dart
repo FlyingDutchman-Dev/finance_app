@@ -52,6 +52,7 @@ class _HomePageState extends State<HomePage> {
         ),
         child: FloatingActionButton(
           backgroundColor: Colors.transparent, // Define a cor de fundo do FAB como transparente
+          foregroundColor: Colors.white,
           elevation: 0.0, // Define a elevação do FAB como 0 para eliminar a sombra
           child: const Icon(Icons.add), // Ícone do FAB
           onPressed: () {
@@ -63,16 +64,19 @@ class _HomePageState extends State<HomePage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.home)),
-            IconButton(
-                onPressed: () {}, icon: const Icon(Icons.monetization_on)),
-            const SizedBox(width: 40),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.person)),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.settings))
-          ],
+        child: Padding(
+          padding: const EdgeInsets.only(left: 15,right: 15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(onPressed: () {}, icon: const Icon(Icons.home)),
+              IconButton(
+                  onPressed: () {}, icon: const Icon(Icons.monetization_on)),
+              const SizedBox(width: 40),
+              IconButton(onPressed: () {}, icon: const Icon(Icons.person)),
+              IconButton(onPressed: () {}, icon: const Icon(Icons.settings))
+            ],
+          ),
         ),
       ),
     );
